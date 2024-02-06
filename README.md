@@ -1,3 +1,15 @@
+# Pre-requisites:
+- Python installed
+    - flask installed
+    - pandas installed
+
+# How to run
+- load data to database
+    - Command: python load_pop_data.py
+- check if 'stats_can_population.sqlite' file has been generated
+- if it is generated, run the server
+    - Command: python server.py
+
 # Contents
 - population.csv 
     Data of Q4 2023 per province from Statistics Canada
@@ -13,4 +25,5 @@
     Contains the backend (API)
 
 - stats_can_population.sqlite
-    The SQL file created
+
+
