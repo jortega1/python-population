@@ -14,7 +14,7 @@ def create_cursor(conn):
     conn.row_factory = sqlite3.Row
     return conn.cursor()
 
-@app.route('/url')
+@app.route('/urls', methods=['GET'])
 def welcome():
     valid_url = []
     u1 = {
@@ -66,7 +66,7 @@ def welcome():
 
     return jsonify(valid_url)
 
-@app.route('/population')
+@app.route('/population', methods=['GET'])
 def population():
     population_data = []
     try: 
@@ -95,7 +95,7 @@ def population():
     else:
         return jsonify(population_data)
     
-@app.route('/population/most')
+@app.route('/population/most', methods=['GET'])
 def most_population():
     most_populated = []
     try: 
@@ -116,7 +116,7 @@ def most_population():
         return f'Error: {e}'
     return jsonify(most_populated)
 
-@app.route('/immigrants/continents')
+@app.route('/immigrants/continents', methods=['GET'])
 def ab_immigrants_continents():
     immigrants = []
     try:
@@ -147,7 +147,7 @@ def ab_immigrants_continents():
     else:
         return jsonify(immigrants)
     
-@app.route('/immigrants/continent/most')
+@app.route('/immigrants/continent/most', methods=['GET'])
 def ab_immigrants_continent_most():
     immigrants = []
     try:
@@ -168,7 +168,7 @@ def ab_immigrants_continent_most():
         return f'Error: {e}'
     return jsonify(immigrants)
 
-@app.route('/immigrants/countries')
+@app.route('/immigrants/countries', methods=['GET'])
 def ab_immigrants_countries():
     immigrants = []
     try:
@@ -199,7 +199,7 @@ def ab_immigrants_countries():
     else:
         return jsonify(immigrants)
     
-@app.route('/immigrants/countries/most')
+@app.route('/immigrants/countries/most', methods=['GET'])
 def ab_immigrants_countries_most():
     immigrants = []
     try:
