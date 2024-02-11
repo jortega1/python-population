@@ -4,15 +4,15 @@ try:
     conn = sqlite3.connect('stats_can_immigrant.sqlite')
 
     # Complete Information Table - Population of Alberta 2021
-    df = pd.read_csv('immigrants_alberta.csv')
+    df = pd.read_csv('data/immigrants_alberta.csv')
     df.to_sql('immigrant', conn, if_exists='replace', index=False)
 
     # Population of Alberta by Continent
-    df = pd.read_csv('immigrants_alberta_continent.csv')
+    df = pd.read_csv('data/immigrants_alberta_continent.csv')
     df.to_sql('immigrants_alberta_continent', conn, if_exists='replace', index=False)
 
     # Population of Alberta by Country
-    df = pd.read_csv('immigrants_alberta_country.csv')
+    df = pd.read_csv('data/immigrants_alberta_country.csv')
     df.to_sql('immigrants_alberta_country', conn, if_exists='replace', index=False)
 except Exception as e:
     print (f'Error: {e}')

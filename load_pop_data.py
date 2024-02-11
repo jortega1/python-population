@@ -3,7 +3,7 @@ import pandas as pd
 try:
     conn = sqlite3.connect('stats_can_population.sqlite')
 
-    df = pd.read_csv('population.csv', usecols=['GEO', 'VALUE'])
+    df = pd.read_csv('data/population.csv', usecols=['GEO', 'VALUE'])
     df.to_sql('population', conn, if_exists='replace', index=False)
 
     sql = pd.read_sql('select * from population limit 10', conn)
