@@ -3,6 +3,12 @@
     - flask installed
     - pandas installed
 
+# Tasks :
+- ### Return what is most populated province in Canada? (Easy)
+    This is answered by localhost:///population/most
+- ### Return which country immigrants are born in Alberta (Advanced)
+    This is answered by localhost:///immigrants/country/most
+
 # How to use
 - ### load data to database
     - Command: **_python load_pop_data.py_**
